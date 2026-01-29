@@ -1,0 +1,22 @@
+capturer:
+  mode: clipboard
+
+ai:
+  provider: openai
+  model: gpt-4
+  api_base: null
+  timeout: 30
+
+hotkey:
+  trigger: ctrl+shift+e
+
+display:
+  language: zh
+  show_details: true
+  show_emoji: true
+  risk_color: true
+
+risk:
+  enable_ai_assessment: true
+  local_precheck: true
+  strict_mode: false

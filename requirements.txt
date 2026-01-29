@@ -1,0 +1,19 @@
+# CLI命令解释Agent - 依赖包
+
+# 剪贴板操作
+pyperclip>=1.8.2
+
+# 全局快捷键监听
+keyboard>=0.13.5
+
+# 终端美化输出
+rich>=13.7.0
+
+# 统一AI接口
+litellm>=1.40.0
+
+# 配置文件解析
+pyyaml>=6.0
+
+# CLI框架
+click>=8.1.0

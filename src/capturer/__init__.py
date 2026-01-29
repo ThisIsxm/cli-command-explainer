@@ -1,0 +1,1 @@
+["BaseCapturer", "ClipboardCapturer", "HotkeyManager"]
