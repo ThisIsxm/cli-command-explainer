@@ -1,0 +1,25 @@
+# Include important documentation files
+include LICENSE
+include README.md
+include CHANGELOG.md
+include QUICKSTART.md
+include requirements.txt
+
+# Include configuration files
+include config/*.yaml
+include config/*.yml
+recursive-include config *.yaml *.yml
+
+# Include source code
+recursive-include src *.py
+
+# Include example files
+include .env.example
+
+# Exclude development and test files
+exclude .env
+recursive-exclude tests *
+recursive-exclude .planning *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * .DS_Store

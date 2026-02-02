@@ -1,1 +1,58 @@
-["cod]\n*$py.class\n*.so\n.Python\nbuild/\ndevelop-eggs/\ndist/\ndownloads/\neggs/\n.eggs/\nlib/\nlib64/\nparts/\nsdist/\nvar/\nwheels/\n*.egg-info/\n.installed.cfg\n*.egg\n\n# \u865a\u62df\u73af\u5883\nvenv/\nENV/\nenv/\n.venv\n\n# IDE\n.vscode/\n.idea/\n*.swp\n*.swo\n*~\n\n# \u914d\u7f6e\u6587\u4ef6\uff08\u5305\u542b\u654f\u611f\u4fe1\u606f\uff09\nconfig/config.yaml\n.env\n*.env\n\n# \u65e5\u5fd7\n*.log\nlogs/\n\n# \u6d4b\u8bd5\n.pytest_cache/\n.coverage\nhtmlcov/\n\n# \u4e34\u65f6\u6587\u4ef6\n*.tmp\n.DS_Store"]
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv
+cli-venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Config files (保留示例文件)
+.env
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+test_*.txt
+test_*.log
+
+# Temporary files
+*.tmp
+.DS_Store
+
+# Development docs (保留在 .planning 中)
+CODE_REVIEW.md
+PROGRESS.md
+AI_TEST_SUCCESS.md

@@ -1,22 +1,65 @@
-capturer:
-  mode: clipboard
+# CLI 命令解释 Agent - 配置文件
+# 此文件用于配置 AI 服务、UI 显示等设置
 
 ai:
-  provider: openai
-  model: gpt-4
-  api_base: null
+  # API 密钥从环境变量 API_KEY 自动读取
+  # 请在 .env 文件中设置: API_KEY=sk-your-key
+  # 不要在此文件中直接填写 API 密钥
+
+  # API 基础 URL（根据服务商修改）
+  # OpenAI:      https://api.openai.com/v1
+  # DeepSeek:    https://api.deepseek.com
+  # OpenRouter:  https://openrouter.ai/api/v1
+  # Ollama:      http://localhost:11434/v1
+  # LM Studio:   http://localhost:1234/v1
+  api_base: https://openrouter.ai/api/v1
+
+  # 模型名称（根据服务商修改）
+  # OpenAI:      gpt-4o-mini, gpt-4, gpt-3.5-turbo
+  # DeepSeek:    deepseek-chat, deepseek-coder
+  # OpenRouter:  anthropic/claude-3.5-sonnet, google/gemini-pro
+  # Ollama:      llama3.2, qwen2.5, deepseek-r1
+  # LM Studio:   本地模型名称
+  model: openai/gpt-oss-120b
+
+  # 请求超时（秒）
   timeout: 30
 
+  # 最大重试次数
+  max_retries: 3
+
+# 快捷键配置
 hotkey:
+  # 触发快捷键（剪贴板模式）
   trigger: ctrl+shift+e
 
+# 显示配置
 display:
+  # 语言设置 (zh: 中文, en: 英文)
   language: zh
-  show_details: true
+
+  # 显示 emoji
   show_emoji: true
+
+  # 显示详细信息
+  show_details: true
+
+  # 启用风险颜色编码
   risk_color: true
 
+# 命令捕获配置
+capturer:
+  # 捕获模式 (keyboard: 快捷键, clipboard: 剪贴板)
+  mode: keyboard
+
+# 风险评估配置
 risk:
-  enable_ai_assessment: true
-  local_precheck: true
-  strict_mode: false
+  # 启用风险评估
+  enabled: true
+
+  # 风险阈值 (0-100)
+  # 低风险: < 30, 中风险: 30-60, 高风险: 60-80, 严重: > 80
+  thresholds:
+    medium: 30
+    high: 60
+    critical: 80
