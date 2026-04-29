@@ -52,7 +52,5 @@ test_*.log
 *.tmp
 .DS_Store
 
-# Development docs (保留在 .planning 中)
-CODE_REVIEW.md
-PROGRESS.md
-AI_TEST_SUCCESS.md
+# Development and planning docs
+.planning/
